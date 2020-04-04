@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+</head>
+<body>
+<h3>添加用户</h3>
+
+<form action="addUser" method="post">
+<span th:errors="${user.name}" style="color:red"></span><br />
+用户名: <input type="text" name="name" /><br />
+<span th:errors="${user.password}" style="color:red"></span><br />
+密码: <input type="password" name="password"/><br />
+<span th:errors="${user.grade}" style="color:red"></span><br />
+成绩: <input type="text" name="grade" /><br />
+<span th:errors="${user.email}" style="color:red"></span><br />
+邮箱: <input type="text" name="email" /><br />
+<input type="submit" value="添加" >
+</form>
+</body>
+</html>

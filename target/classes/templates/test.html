@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="addTest" method="post">
+    <span th:errors="${test.name}" style="color:red"></span><br />
+    用户名: <input type="text" name="name" /><br />
+    <span th:errors="${test.password}" style="color:red"></span><br />
+    密码: <input type="password" name="password"/><br />
+    <span th:errors="${test.grade}" style="color:red"></span><br />
+    成绩: <input type="text" name="grade" /><br />
+    <span th:errors="${test.email}" style="color:red"></span><br />
+    邮箱: <input type="text" name="email" /><br />
+
+    <input type="submit" value="添加用户" >
+</form>
+</body>
+</html>
